@@ -8,7 +8,14 @@ import Banner2 from "./images/banner-2.jpg";
 function App() {
   return (
     <Container>
-      <Hero style={{ backgroundImage: `url(${HeroImage})` }}></Hero>
+      <Hero style={{ backgroundImage: `url(${HeroImage})` }}>
+        <LogoWhite style={{ backgroundImage: `url(${logoWhite})` }}></LogoWhite>
+        <Heading>
+          <p className="top-line">WELCOME TO</p>
+          <p className="second-line">Rooster Grin</p>
+          <StyledButton hero>BUTTON BUTTON</StyledButton>
+        </Heading>
+      </Hero>
       <SplitSection style={{ height: "526px" }}>
         <SubSection></SubSection>
         <SubSection style={{ backgroundImage: `url(${Image1})` }}></SubSection>
