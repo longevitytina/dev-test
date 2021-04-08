@@ -96,6 +96,23 @@ const Hero = styled.div`
 const Section = styled.div`
   height: 600px;
   background-color: pink;
+  /* Mobile ( max 639px ) */
+
+  @media (max-width: 639px) {
+  }
+
+  /* Small devices (portrait tablets and large phones, 640px and up) */
+  @media (min-width: 640px and max-width:1023px) {
+  }
+
+  /* Large devices (laptops/desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+    height: 750px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
 `;
 const SplitSection = styled.div`
   height: 600px;
