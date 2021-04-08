@@ -10,10 +10,19 @@ import HomeHygiene from "./images/home-hygiene.svg";
 import HomeExpertise from "./images/home-expertise.svg";
 import Star from "./images/star-fill.svg";
 import { Button } from "react-bootstrap";
-import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Facebook from "./images/facebook.svg";
+import Instagram from "./images/instagram.svg";
 
 import StyledCarousel from "./Carousel";
+
+// TODO
+// recatoring
+/**
+ * Logo component
+ *
+ *
+ *
+ */
 
 function App() {
   return (
@@ -113,7 +122,17 @@ function App() {
           <StyledCarousel image={Image1} image2={Image1} image3={Image1} />
         </SubSection>
       </SplitSection>
-      <Footer> footer</Footer>
+      <Footer>
+        <div className="icon-group">
+          <p>Follow us:</p>
+          <a href="/">
+            <img src={Facebook}></img>
+          </a>
+          <a href="/">
+            <img src={Instagram}></img>
+          </a>
+        </div>
+      </Footer>
     </Container>
   );
 }
@@ -368,7 +387,17 @@ const SectionDescriptionTwo = styled.div`
 
 const Footer = styled.div`
   height: 152px;
+  text-align: center;
   background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  div {
+    margin: 30px;
+  }
+  img {
+    margin: 0 10px;
+    height: 30px;
+  }
   @media (max-width: 639px) {
   }
 
