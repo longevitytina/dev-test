@@ -80,16 +80,20 @@ const Hero = styled.div`
 
   /* Small devices (portrait tablets and large phones, 640px and up) */
   @media (min-width: 640px and max-width:1023px) {
+    height: 750px;
+
     background-size: 0px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   /* Large devices (laptops/desktops, 1024px and up) */
-  @media (min-width: (1024px)) {
+  @media (min-width: 1024px) {
+    height: 750px;
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top left;
+    background-size: cover;
   }
 `;
 
