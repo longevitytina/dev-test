@@ -49,6 +49,19 @@ const StyledButton = styled(Button)`
   margin: 0 auto;
   padding: 20px;
 `;
+const Heading = styled.div`
+  text-align: center;
+  .top-line {
+    font-family: Open Sans;
+    font-size: 72px;
+    color: white;
+  }
+  .second-line {
+    font-family: Open Sans;
+    font-size: 64px;
+    color: white;
+  }
+`;
 
 const Hero = styled.div`
   height: 750px;
