@@ -126,6 +126,14 @@ const SplitSection = styled.div`
     flex-direction: column;
 
     background-position: right;
+  
+
+  /* Small devices (portrait tablets and large phones, 640px and up) */
+  @media (min-width: 640px and max-width:1023px) {
+  }
+
+  /* Large devices (laptops/desktops, 1024px and up) */
+  @media (min-width: (1024px)) {
   }
 `;
 const SubSection = styled.div`
