@@ -5,6 +5,10 @@ import Image1 from "./images/img-1.jpg";
 import Banner1 from "./images/banner-1.jpg";
 import Banner2 from "./images/banner-2.jpg";
 import logoWhite from "./images/logo-white.svg";
+import HomeRention from "./images/home-retention.svg";
+import HomeLab from "./images/home-lab.svg";
+import HomeHygiene from "./images/home-hygiene.svg";
+import HomeExpertise from "./images/home-expertise.svg";
 import { Button } from "react-bootstrap";
 
 function App() {
@@ -19,8 +23,8 @@ function App() {
         </Heading>
       </Hero>
       <SplitSection style={{ height: "526px" }}>
-        <SubSection>
-          <SectionDescription>
+        <SubSection className="sub-section-1-left">
+          <div>
             <h1>Lorem Ipsum</h1>
             <p>
               Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
@@ -31,9 +35,12 @@ function App() {
               vitae semper duis feugiat .
             </p>
             <a href="/"> > Lorem Ipsum</a>
-          </SectionDescription>
+          </div>
         </SubSection>
-        <SubSection style={{ backgroundImage: `url(${Image1})` }}></SubSection>
+        <SubSection
+          className="sub-section-1-right"
+          style={{ backgroundImage: `url(${Image1})` }}
+        ></SubSection>
       </SplitSection>
       <Section style={{ backgroundImage: `url(${Banner1})` }}>
         <SectionDescriptionTwo>
@@ -42,11 +49,39 @@ function App() {
         </SectionDescriptionTwo>
       </Section>
       <SplitSection>
-        <SubSection style={{}}>Split</SubSection>
-        <SubSection style={{ backgroundColor: "#F7F7F7" }}></SubSection>
+        <SubSection className="sub-section-2-left">
+          <div>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>
+              Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit
+              quam, ut pede ut ante, in viverra eros dictum nisl ligula.
+            </p>
+            <a href="/"> > Lorem Ipsum</a>
+          </div>
+        </SubSection>
+        <SubSection className="sub-section-2-right">
+          <div className="logo-container">
+            <FourLogoGroup style={{ backgroundImage: `url(${HomeExpertise})` }}>
+              <p>LOREM</p>
+            </FourLogoGroup>
+            <FourLogoGroup style={{ backgroundImage: `url(${HomeHygiene})` }}>
+              <p>LOREM IPSUM</p>
+            </FourLogoGroup>
+            <FourLogoGroup style={{ backgroundImage: `url(${HomeLab})` }}>
+              <p>LOREM IPSUM</p>
+            </FourLogoGroup>
+            <FourLogoGroup style={{ backgroundImage: `url(${HomeRention})` }}>
+              <p>LOREM</p>
+            </FourLogoGroup>
+          </div>
+        </SubSection>
       </SplitSection>
-      <Section style={{ backgroundImage: `url(${Banner2})` }}>
-        <SectionDescriptionThree>
+      <Section
+        className="section-3"
+        style={{ backgroundImage: `url(${Banner2})` }}
+      >
+        <div>
           <h1>Lorem Ipsum</h1>
           <p>
             Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
@@ -54,7 +89,7 @@ function App() {
             ut pede ut ante, in viverra eros dictum nisl ligula.
           </p>
           <StyledButton>BUTTON BUTTON</StyledButton>
-        </SectionDescriptionThree>
+        </div>
       </Section>
       <SplitSection>
         <SubSection></SubSection>
@@ -128,9 +163,30 @@ const Hero = styled.div`
 
 const Section = styled.div`
   height: 600px;
-  background-color: pink;
-  /* Mobile ( max 639px ) */
 
+  &.section-3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    h1 {
+      font-size: 68px;
+      color: #613476;
+    }
+    p {
+      font-size: 30px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #613476;
+    }
+    div {
+      width: 25%;
+      margin-right: 100px;
+    }
+  }
+
+  /* Mobile ( max 639px ) */
   @media (max-width: 639px) {
   }
 
@@ -165,9 +221,69 @@ const SubSection = styled.div`
   flex: 1;
   width: 30px;
   background-color: #ffffff;
-  @media (max-width: 639px) {
+
+  &.sub-section-1-left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+      margin-right: 100px;
+      width: 50%;
+    }
+    h1 {
+      font-size: 50px;
+      color: #613476;
+    }
+    p {
+      font-size: 20px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #613476;
+    }
   }
 
+  &.sub-section-2-left {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+      margin-right: 100px;
+      width: 50%;
+    }
+    h1 {
+      font-size: 50px;
+      color: black;
+    }
+    p {
+      font-size: 20px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #613476;
+    }
+  }
+  &.sub-section-2-right {
+    background-color: #f8eaff;
+    display: flex;
+    justify-content: center;
+
+    div.logo-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-flow: row wrap;
+    }
+  }
+  @media (max-width: 639px) {
+  }
   /* Small devices (portrait tablets and large phones, 640px and up) */
   @media (min-width: 640px and max-width:1023px) {
   }
@@ -180,20 +296,19 @@ const SubSection = styled.div`
     background-size: cover;
   }
 `;
-const SectionDescription = styled.div`
-  width: 50%;
-  margin: 100px 300px;
-  h1 {
-    font-size: 50px;
-    color: #613476;
-  }
+const FourLogoGroup = styled.div`
+  height: 102px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px;
+  border: #613476 solid 0.1px;
+  border-radius: 50%;
+  margin: 50px;
   p {
-    font-size: 20px;
-  }
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #613476;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 122px;
   }
 `;
 const SectionDescriptionTwo = styled.div`
@@ -205,24 +320,6 @@ const SectionDescriptionTwo = styled.div`
   }
   p {
     font-size: 20px;
-  }
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #613476;
-  }
-`;
-const SectionDescriptionThree = styled.div`
-  margin-top: 100px;
-  margin-right: 100px;
-  float: right;
-  width: 25%;
-  h1 {
-    font-size: 68px;
-    color: #613476;
-  }
-  p {
-    font-size: 25px;
   }
   a {
     text-decoration: none;
