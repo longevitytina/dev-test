@@ -33,7 +33,12 @@ function App() {
         </SubSection>
         <SubSection style={{ backgroundImage: `url(${Image1})` }}></SubSection>
       </SplitSection>
-      <Section style={{ backgroundImage: `url(${Banner1})` }}></Section>
+      <Section style={{ backgroundImage: `url(${Banner1})` }}>
+        <SectionDescriptionTwo>
+          <h1>Lorem Ipsum</h1>
+          <StyledButton>BUTTON BUTTON</StyledButton>
+        </SectionDescriptionTwo>
+      </Section>
       <SplitSection>
         <SubSection style={{}}>Split</SubSection>
         <SubSection style={{ backgroundColor: "#F7F7F7" }}></SubSection>
