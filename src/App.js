@@ -1,25 +1,84 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import HeroImage from "./images/hero.jpg";
+import Image1 from "./images/img-1.jpg";
+import Banner1 from "./images/banner-1.jpg";
+import Banner2 from "./images/banner-2.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Hero style={{ backgroundImage: `url(${HeroImage})` }}></Hero>
+      <SplitSection style={{ height: "526px" }}>
+        <SubSection></SubSection>
+        <SubSection style={{ backgroundImage: `url(${Image1})` }}></SubSection>
+      </SplitSection>
+      <Section style={{ backgroundImage: `url(${Banner1})` }}></Section>
+      <SplitSection>
+        <SubSection style={{}}>Split</SubSection>
+        <SubSection style={{ backgroundColor: "#F7F7F7" }}></SubSection>
+      </SplitSection>
+      <Section style={{ backgroundImage: `url(${Banner2})` }}></Section>
+      <SplitSection>
+        <SubSection></SubSection>
+        <SubSection></SubSection>
+      </SplitSection>
+      <Footer> footer</Footer>
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+/* Large devices (laptops/desktops, 1024px and up) */
+
+const Hero = styled.div`
+  height: 750px;
+
+  /* Mobile ( max 639px ) */
+  @media (max-width: 639px) {
+    background-position: right;
+  }
+
+  /* Small devices (portrait tablets and large phones, 640px and up) */
+  @media (min-width: 640px and max-width:1023px) {
+    background-size: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Large devices (laptops/desktops, 1024px and up) */
+  @media (min-width: (1024px)) {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+`;
+
+const Section = styled.div`
+  height: 600px;
+  background-color: pink;
+`;
+const SplitSection = styled.div`
+  height: 600px;
+  display: flex;
+  /* Mobile ( max 639px ) */
+  @media (max-width: 639px) {
+    flex-direction: column;
+
+    background-position: right;
+  }
+`;
+const SubSection = styled.div`
+  flex-grow: 1;
+  background-color: #ffffff;
+`;
+
+const Footer = styled.div`
+  height: 152px;
+  background-color: #fafafa;
+`;
