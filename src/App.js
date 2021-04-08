@@ -1,4 +1,3 @@
-import "./App.css";
 import styled from "styled-components";
 import HeroImage from "./images/hero.jpg";
 import Image1 from "./images/img-1.jpg";
@@ -9,7 +8,12 @@ import HomeRention from "./images/home-retention.svg";
 import HomeLab from "./images/home-lab.svg";
 import HomeHygiene from "./images/home-hygiene.svg";
 import HomeExpertise from "./images/home-expertise.svg";
+import Star from "./images/star-fill.svg";
 import { Button } from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import StyledCarousel from "./Carousel";
 
 function App() {
   return (
@@ -92,8 +96,22 @@ function App() {
         </div>
       </Section>
       <SplitSection>
-        <SubSection></SubSection>
-        <SubSection></SubSection>
+        <SubSection className="sub-section-3-left">
+          <div>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <div className="star-group">
+              <img className="star-icon" src={Star} alt="star-logo"></img>
+              <img className="star-icon" src={Star} alt="star-logo"></img>
+              <img className="star-icon" src={Star} alt="star-logo"></img>
+              <img className="star-icon" src={Star} alt="star-logo"></img>
+              <img className="star-icon" src={Star} alt="star-logo"></img>
+            </div>
+          </div>
+        </SubSection>
+
+        <SubSection className="sub-section-3-right">
+          <StyledCarousel image={Image1} image2={Image1} image3={Image1} />
+        </SubSection>
       </SplitSection>
       <Footer> footer</Footer>
     </Container>
@@ -282,6 +300,26 @@ const SubSection = styled.div`
       flex-flow: row wrap;
     }
   }
+
+  &.sub-section-3-left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+      margin-right: 100px;
+      width: 50%;
+    }
+    h1 {
+      margin-bottom:
+      font-size: 50px;
+      color: black;
+    }
+
+    img.star-icon {
+      margin: 0 5px;
+    }
+  }
+
   @media (max-width: 639px) {
   }
   /* Small devices (portrait tablets and large phones, 640px and up) */
