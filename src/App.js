@@ -41,7 +41,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
-/* Large devices (laptops/desktops, 1024px and up) */
+const StyledButton = styled(Button)`
+  color: black;
+  background: ${(props) => (props.hero ? "#ac5fd0" : "FF7218")};
+  color: white;
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 20px;
+`;
 
 const Hero = styled.div`
   height: 750px;
