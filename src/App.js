@@ -115,4 +115,14 @@ const SubSection = styled.div`
 const Footer = styled.div`
   height: 152px;
   background-color: #fafafa;
+  @media (max-width: 639px) {
+  }
+
+  /* Small devices (portrait tablets and large phones, 640px and up) */
+  @media (min-width: 640px and max-width:1023px) {
+  }
+
+  /* Large devices (laptops/desktops, 1024px and up) */
+  @media (min-width: (1024px)) {
+  }
 `;
