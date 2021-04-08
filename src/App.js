@@ -4,6 +4,8 @@ import HeroImage from "./images/hero.jpg";
 import Image1 from "./images/img-1.jpg";
 import Banner1 from "./images/banner-1.jpg";
 import Banner2 from "./images/banner-2.jpg";
+import logoWhite from "./images/logo-white.svg";
+import { Button } from "react-bootstrap";
 
 function App() {
   return (
@@ -64,14 +66,13 @@ function App() {
 }
 
 export default App;
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
 const StyledButton = styled(Button)`
   color: black;
-  background: ${(props) => (props.hero ? "#ac5fd0" : "FF7218")};
+  background: ${(props) => (props.hero ? "#ac5fd0" : "#FF7218")};
   color: white;
   font-size: 20px;
   margin: 0 auto;
@@ -149,12 +150,8 @@ const Section = styled.div`
 const SplitSection = styled.div`
   height: 600px;
   display: flex;
-  /* Mobile ( max 639px ) */
-  @media (max-width: 639px) {
-    flex-direction: column;
-
-    background-position: right;
-  
+  flex-direction: row;
+  background-position: right;
 
   /* Small devices (portrait tablets and large phones, 640px and up) */
   @media (min-width: 640px and max-width:1023px) {
@@ -165,8 +162,73 @@ const SplitSection = styled.div`
   }
 `;
 const SubSection = styled.div`
-  flex-grow: 1;
+  flex: 1;
+  width: 30px;
   background-color: #ffffff;
+  @media (max-width: 639px) {
+  }
+
+  /* Small devices (portrait tablets and large phones, 640px and up) */
+  @media (min-width: 640px and max-width:1023px) {
+  }
+
+  /* Large devices (laptops/desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+`;
+const SectionDescription = styled.div`
+  width: 50%;
+  margin: 100px 300px;
+  h1 {
+    font-size: 50px;
+    color: #613476;
+  }
+  p {
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #613476;
+  }
+`;
+const SectionDescriptionTwo = styled.div`
+  width: 50%;
+  margin: 300px 300px;
+  h1 {
+    font-size: 50px;
+    color: #613476;
+  }
+  p {
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #613476;
+  }
+`;
+const SectionDescriptionThree = styled.div`
+  margin-top: 100px;
+  margin-right: 100px;
+  float: right;
+  width: 25%;
+  h1 {
+    font-size: 68px;
+    color: #613476;
+  }
+  p {
+    font-size: 25px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #613476;
+  }
 `;
 
 const Footer = styled.div`
