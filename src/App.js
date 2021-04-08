@@ -63,6 +63,13 @@ const Heading = styled.div`
   }
 `;
 
+const LogoWhite = styled.div`
+  height: 45px;
+  width: 249px;
+  margin: 33px 0 0 173px;
+  display: block;
+  background-repeat: no-repeat;
+`;
 const Hero = styled.div`
   height: 750px;
 
