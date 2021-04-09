@@ -78,34 +78,28 @@ function App() {
         </SubSection>
         <SubSection className="sub-section-2-right">
           <div className="logo-container">
-            <FourLogoGroup
-              data-aos="flip-up"
-              data-aos-anchor-placement="top-center"
-              style={{ backgroundImage: `url(${HomeExpertise})` }}
-            >
+            <div data-aos="flip-up" data-aos-anchor-placement="top-center">
+              <FourLogoGroup
+                style={{ backgroundImage: `url(${HomeExpertise})` }}
+              />
               <p>LOREM</p>
-            </FourLogoGroup>
-            <FourLogoGroup
-              data-aos="fade-up"
-              data-aos-anchor-placement="top-center"
-              style={{ backgroundImage: `url(${HomeHygiene})` }}
-            >
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+              <FourLogoGroup
+                style={{ backgroundImage: `url(${HomeHygiene})` }}
+              />
               <p>LOREM IPSUM</p>
-            </FourLogoGroup>
-            <FourLogoGroup
-              data-aos="flip-up"
-              data-aos-anchor-placement="top-center"
-              style={{ backgroundImage: `url(${HomeLab})` }}
-            >
+            </div>
+            <div data-aos="flip-up" data-aos-anchor-placement="top-center">
+              <FourLogoGroup style={{ backgroundImage: `url(${HomeLab})` }} />
               <p>LOREM IPSUM</p>
-            </FourLogoGroup>
-            <FourLogoGroup
-              data-aos="fade-up"
-              data-aos-anchor-placement="top-center"
-              style={{ backgroundImage: `url(${HomeRention})` }}
-            >
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+              <FourLogoGroup
+                style={{ backgroundImage: `url(${HomeRention})` }}
+              />
               <p>LOREM</p>
-            </FourLogoGroup>
+            </div>
           </div>
         </SubSection>
       </SplitSection>
@@ -399,14 +393,18 @@ const SubSection = styled.div`
       justify-content: center;
       height: 150px;
       div.logo-container {
-        margin-top: 20px;
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: flex-start;
+        text-align: center;
+        align-items: center;
         align-content: center;
         justify-content: center;
         flex-direction: row;
+
+        div{
+          margin: auto;
+        }
       }
     }
 
@@ -495,11 +493,17 @@ const SubSection = styled.div`
         width: 100%;
         height: 100%;
         display: flex;
+        text-align:center;
         align-items: center;
         align-content: center;
-        justify-content: center;
         flex-direction: row;
         flex-flow: row wrap;
+
+        div{
+          margin: 30px auto;
+          flex: 1 0 50%;
+        }
+
       }
 
 
@@ -526,58 +530,36 @@ const SubSection = styled.div`
       }
   }
 `;
+
 const FourLogoGroup = styled.div`
+  background-repeat: no-repeat;
+  background-position: center;
+  border: #613476 solid 0.1px;
+  border-radius: 50%;
+  margin: 0 20px;
+
   /* -------------------------- Mobile/Small devices (portrait tablets and large phones, 768px and below)-------------------------- */
   @media (max-width: 768px) {
     height: 50px;
     width: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 30px;
-    border: #613476 solid 0.1px;
-    border-radius: 50%;
-    margin: 20px;
-    :hover {
-      transform: skew(-10deg);
-    }
+
     p {
       font-size: 10px;
       text-align: center;
-      margin-top: 50px;
     }
   }
 
   /* ------------------------- Laptops (769px and up) ------------------------- */
   @media (min-width: 769px) {
-    height: 102px;
-    width: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70px;
-    border: #613476 solid 0.1px;
-    border-radius: 50%;
-    margin: 50px;
+    height: 130px;
+    width: 130px;
+    background-size: 88px;
+
     p {
       font-size: 22px;
       text-align: center;
-      margin-top: 122px;
     }
-  }
-`;
-const SectionDescriptionTwo = styled.div`
-  width: 50%;
-  margin: 300px 300px;
-  h1 {
-    font-size: 50px;
-    color: #613476;
-  }
-  p {
-    font-size: 20px;
-  }
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #613476;
   }
 `;
 
