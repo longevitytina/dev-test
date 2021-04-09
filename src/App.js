@@ -39,7 +39,7 @@ function App() {
       <SplitSection>
         <SubSection className="sub-section-1-left">
           <div>
-            <h1>Lorem Ipsum</h1>
+            <h1>LOREM IPSUM</h1>
             <p>
               Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
               magna est sociis, neque in odio vel, sit lobortis erat. Fugit
@@ -59,7 +59,7 @@ function App() {
 
       <Section style={{ backgroundImage: `url(${Banner1})` }}>
         <div className="section-1">
-          <h1>Lorem Ipsum</h1>
+          <h1>LOREM IPSUM</h1>
           <StyledButton href="/">BUTTON BUTTON</StyledButton>
         </div>
       </Section>
@@ -67,7 +67,7 @@ function App() {
       <SplitSection>
         <SubSection className="sub-section-2-left">
           <div>
-            <h1>Lorem ipsum dolor sit amet</h1>
+            <h1>LORE IPSUM DOLOR SIT AMET</h1>
             <p>
               Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
               magna est sociis, neque in odio vel, sit lobortis erat. Fugit
@@ -122,7 +122,7 @@ function App() {
       <SplitSection>
         <SubSection className="sub-section-3-left">
           <div>
-            <h1>Lorem ipsum dolor sit amet</h1>
+            <h1>LORE IPSUM DOLOR SIT AMET</h1>
             <div className="star-group">
               <img className="star-icon" src={Star} alt="star-logo"></img>
               <img className="star-icon" src={Star} alt="star-logo"></img>
@@ -220,6 +220,7 @@ const Hero = styled.div`
     background-position: top left;
     background-size: cover;
     height: 700px;
+
     .rooster-logo {
       height: 45px;
       width: 249px;
@@ -227,8 +228,10 @@ const Hero = styled.div`
       display: block;
       background-repeat: no-repeat;
     }
+
     .heading {
       text-align: center;
+      // margin: auto;
       .top-line {
         font-size: 72px;
         color: white;
@@ -518,6 +521,10 @@ const SubSection = styled.div`
           margin-right: 100px;
           width: 50%;
           font-size: 60px;
+        }
+        div.star-group{
+          margin: 0;
+          width: 100%;
         }
         h1 {
           margin-bottom:
