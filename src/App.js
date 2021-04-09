@@ -36,7 +36,7 @@ function App() {
         </div>
       </Hero>
 
-      <SplitSection style={{ height: "526px" }}>
+      <SplitSection>
         <SubSection className="sub-section-1-left">
           <div>
             <h1>Lorem Ipsum</h1>
@@ -330,6 +330,7 @@ const SplitSection = styled.div`
   /* -------------------------- Mobile/Small devices (portrait tablets and large phones, 768px and below)-------------------------- */
 
   @media (max-width: 768px) {
+    height: 400px;
     width: 100%;
     flex-direction: column;
   }
@@ -381,7 +382,7 @@ const SubSection = styled.div`
 
     &.sub-section-2-left {
       height: 300px;
-      margin: 40px;
+      margin: 0
       margin-left: 10px;
       background-color: #ffffff;
       display: flex;
