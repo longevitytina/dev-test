@@ -21,7 +21,13 @@ function App() {
   return (
     <Container>
       <Hero
-        style={{ backgroundImage: `url(${HeroImage})` }}
+        style={{
+          backgroundImage: `url(${HeroImage})`,
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         data-aos="fade-in"
         data-aos-offset="600"
         data-aos-duration="800"
@@ -195,7 +201,7 @@ const Hero = styled.div`
     align-items: center;
 
     .rooster-logo {
-      height: 0;
+      display: none;
     }
     .heading {
       text-align: center;
@@ -224,14 +230,14 @@ const Hero = styled.div`
     .rooster-logo {
       height: 45px;
       width: 249px;
-      margin: 33px 0 0 173px;
-      display: block;
+      position: absolute;
+      left: 7%;
+      top: 10%;
       background-repeat: no-repeat;
     }
 
     .heading {
       text-align: center;
-      // margin: auto;
       .top-line {
         font-size: 72px;
         color: white;
