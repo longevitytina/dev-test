@@ -1,10 +1,9 @@
-import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import "./App.css";
-// import Image1 from "./images/img-1.jpg";
+import "./Carousel.css";
 
+// TODO dynamic carousel data
 const testimonialData = [
   {
     date: "08/08/2019",
